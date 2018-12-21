@@ -23,6 +23,8 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDModel
         public string VersaoEquipamento { get; set; }
         public string VersaoDll { get; set; }       
         public int ClienteId { get; set; }
+        public string PortaCom { get; set; }
+        public int IDterminal { get; set; }
 
         public Cliente Cliente { get; set; }
 
