@@ -2,15 +2,16 @@
 using System.Data.Entity;
 using SoftecsulTarGetID.Migrations;
 using System.Configuration;
-using MySql.Data.MySqlClient;
+using MySql.Data.Entity;
+using System.Data.Common;
 
 namespace SoftecsulTarGetID.SoftecsulTarGetIDData
 {
+    //[DbConfigurationType(typeof(MySqlEFConfiguration))]
     class TarGetIDContext : DbContext
-    {
-
-        //public TarGetIDContext() : base("DesktopBaseMySql")
+    {      
         public TarGetIDContext() : base("DesktopBase")
+        //public TarGetIDContext() : base("DesktopBase")
         {
             //E agora vamos modificar o construtor do contexto para ele chamar o DatabaseInitializer,
             //que é quem faz todo o processo acontecer:
@@ -39,7 +40,7 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDData
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<ClienteEquipamento> ClienteEquipamentos { get; set; }
         public DbSet<TipoManutencao> TipoManutencoes { get; set; }
-        public DbSet<StatusRegistro> StatusRegistros { get; set; }
+        public DbSet<StatusRegistro> StatusRegistroes { get; set; }
 
     }
 }

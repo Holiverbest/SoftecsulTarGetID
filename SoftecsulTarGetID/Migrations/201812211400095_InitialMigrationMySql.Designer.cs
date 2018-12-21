@@ -7,13 +7,13 @@ namespace SoftecsulTarGetID.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class InitialMigrationMySql : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigrationMySql));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812072011266_InitialCreate"; }
+            get { return "201812211400095_InitialMigrationMySql"; }
         }
         
         string IMigrationMetadata.Source

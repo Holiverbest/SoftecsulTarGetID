@@ -125,6 +125,11 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDView
                             //fcc.Show();
 
                             fcc.ShowDialog();
+
+                            clienteController = new ClienteController();
+
+                            dgvClientes.DataSource = clienteController.ListaTodos();
+
                             statusRegistroController.Delete(sr.StatusRegistroId);
                             fcc.Dispose();
                         }
@@ -167,6 +172,10 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDView
                             //Para simular duas pessoa alterando, abrir em modo Show
                             //fcc.Show();
                             fcc.ShowDialog();
+
+                            dgvClientes.DataSource = clienteController.ListaTodos();
+
+
                             statusRegistroController.Delete(sr.StatusRegistroId);
                             fcc.Dispose();
                         }
@@ -250,6 +259,6 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDView
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }     
     }
 }

@@ -23,13 +23,13 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDService
 
         public StatusRegistro FindAll(StatusRegistro statusRegistro)
         {           
-            return _context.StatusRegistros.AsNoTracking().FirstOrDefault(obj => obj.Tabela == statusRegistro.Tabela  && obj.IDTabela == statusRegistro.IDTabela  && obj.Funcionario != statusRegistro.Funcionario);
+            return _context.StatusRegistroes.AsNoTracking().FirstOrDefault(obj => obj.Tabela == statusRegistro.Tabela  && obj.IDTabela == statusRegistro.IDTabela  && obj.Funcionario != statusRegistro.Funcionario);
                         
         }
 
         public void Insert(StatusRegistro obj)
         {
-            _context.StatusRegistros.Add(obj);
+            _context.StatusRegistroes.Add(obj);
             _context.SaveChanges();
         }
 
@@ -37,8 +37,8 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDService
         {
             try
             {
-                var obj = _context.StatusRegistros.Find(id);
-                _context.StatusRegistros.Remove(obj);
+                var obj = _context.StatusRegistroes.Find(id);
+                _context.StatusRegistroes.Remove(obj);
                 _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException e)
