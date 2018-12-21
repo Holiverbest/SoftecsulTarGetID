@@ -2,13 +2,14 @@
 using System.Data.Entity;
 using SoftecsulTarGetID.Migrations;
 using System.Configuration;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace SoftecsulTarGetID.SoftecsulTarGetIDData
 {
     class TarGetIDContext : DbContext
     {
 
+        //public TarGetIDContext() : base("DesktopBaseMySql")
         public TarGetIDContext() : base("DesktopBase")
         {
             //E agora vamos modificar o construtor do contexto para ele chamar o DatabaseInitializer,
@@ -31,16 +32,6 @@ namespace SoftecsulTarGetID.SoftecsulTarGetIDData
 
             _cs.SectionInformation.ForceSave = true;
             config.Save();
-            //Configuration.ValidateOnSaveEnabled = true;
-            ////início do código de criptografia
-            //var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            //var _cs = (ConnectionStringsSection)config.GetSection("connectionStrings");
-
-            //if (!_cs.SectionInformation.IsProtected)
-            //{
-            //    _cs.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
-            //    config.Save();
-            //}
 
             var strc = Database.Connection;
         }

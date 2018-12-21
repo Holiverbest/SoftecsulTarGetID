@@ -1,12 +1,9 @@
 namespace SoftecsulTarGetID.Migrations
 {
-    using SoftecsulTarGetID.SoftecsulTarGetIDData;
     using SoftecsulTarGetID.SoftecsulTarGetIDModel;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using System.Configuration;
+    using MySql.Data.MySqlClient;
 
     internal sealed class Configura : DbMigrationsConfiguration<SoftecsulTarGetID.SoftecsulTarGetIDData.TarGetIDContext>
     {
@@ -17,13 +14,14 @@ namespace SoftecsulTarGetID.Migrations
             //o Migrations não conseguir atualizar o banco de dados. você receberá um erro.
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "SoftecsulTarGetID.SoftecsulTarGetIDData.TarGetIDContext";       
-           
+            ContextKey = "SoftecsulTarGetID.SoftecsulTarGetIDData.TarGetIDContext";
+            //Para iniciar uma migração para o Mysql
+            SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
 
-                //HABILITA PARA TESTE E CARREGAR VALORES DEFAULT
-                //SoftecsulTarGetIDData.TarGetIDContext cx = new SoftecsulTarGetIDData.TarGetIDContext();
-                // Seed(cx);
-            }
+            //HABILITA PARA TESTE E CARREGAR VALORES DEFAULT
+            //SoftecsulTarGetIDData.TarGetIDContext cx = new SoftecsulTarGetIDData.TarGetIDContext();
+            // Seed(cx);
+        }
 
         protected override void Seed(SoftecsulTarGetID.SoftecsulTarGetIDData.TarGetIDContext context)
         {
