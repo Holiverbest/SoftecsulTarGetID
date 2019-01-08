@@ -54,6 +54,8 @@
             this.txtNomeFantasia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIE = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,6 +68,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.txtIE);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.gpxTipomanutencao);
@@ -252,7 +256,7 @@
             // 
             // mtbCNPJ
             // 
-            this.mtbCNPJ.Location = new System.Drawing.Point(288, 228);
+            this.mtbCNPJ.Location = new System.Drawing.Point(288, 211);
             this.mtbCNPJ.Mask = "00,000,000/0000-00";
             this.mtbCNPJ.Name = "mtbCNPJ";
             this.mtbCNPJ.Size = new System.Drawing.Size(176, 28);
@@ -268,7 +272,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(173, 228);
+            this.label4.Location = new System.Drawing.Point(173, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 21);
             this.label4.TabIndex = 5;
@@ -323,6 +327,22 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(173, 253);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 21);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "IE";
+            // 
+            // txtIE
+            // 
+            this.txtIE.Location = new System.Drawing.Point(288, 245);
+            this.txtIE.Name = "txtIE";
+            this.txtIE.Size = new System.Drawing.Size(151, 28);
+            this.txtIE.TabIndex = 25;
+            // 
             // frmCadClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,5 +391,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox txtIE;
+        private System.Windows.Forms.Label label6;
     }
 }
